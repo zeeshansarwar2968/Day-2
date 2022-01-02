@@ -1,0 +1,140 @@
+
+Question-1: 
+List 5 difference between Browser JS(console) v Nodejs
+
+Answer:
+Browser JS(console) v Nodejs
+
+Even though both the browser and Node.js use Javascript as therir programming language,
+there are some critical differences between them and hoe these diffrences impact the 
+application development process in both the environments.
+
+1.> The main difference betrween the two would be the presence of the DOM model and/or 
+interactivity in the browser, whereas those do not exist in Node.js.
+
+2.> Additionally, the browser does not have all the effieient APIs, which exists in the Node.js 
+through its modules. 
+
+3.> In Node.js, the environment is unary, malleable and controllable, whereas the browser enviornment is 
+very chaotic due to the presence of numerous browsers.
+
+4.> One stark difference between the two environments would be the usage of CommonJS modules in the node.js 
+enviroment while in the browser the usage of ES Modules is still very limited.
+
+5. Since Node.js is a package based Javascript engine(V8), this provides the 
+developer with the option to use a single runtime to develop frontend as well as backend, 
+as opposed to the browser, where multiple languages are used to program different aspects 
+of the webpage. 
+
+
+
+
+
+Question-2:
+watch & summary 5 points - https://www.youtube.com/watch?v=SmE4OwHztCc&ab_channel=JSConf
+
+Answer:
+
+Even though the video is an extensive and informed introduction on the rendering of the website by the browser, 
+we will try to condense some notable titbits of information from few of the sub-sections of the video here,
+
+a.> One notable thing about HTML is that it is very forgiving in nature in the sense that it will not throw an 
+error for minor syntax issues. For Example:
+A code could be missing certain closing tags, but that in itself is not enough to throw an error and 
+halt the rendering process.
+
+b.> This video provides a brief explanation of the parsing flow, explaining the tokenization process to the parse tree,
+ how the parse tree is developed from the html stream. Consequently the conversion of parse tree into DOM tree is 
+ discussed to describle the rendering process.
+
+c.> <script>, <link> and <style> are few which can halt/pause the parser, as a script can alter the document.
+Thus, the placement of the script tag is important to decrease network latency. Also the concept of the 
+speculative parsing is discuseed whrerin the browser will another process and look ahead and fetch any linked 
+elemets to improve the rendersing process.
+
+d.> One performance insight discussed in the talk is the inclusion of script tag at the bottom of the body.
+As discussed in the previous point, script tag halts the parsing flow, hence it is recommennded to add the script tag 
+at the end of body to improve the rendering process.
+
+e.> The creation of the render tree is discussed using the combination of the DOM as well as CSSOM (CSS object model). 
+This combination of two object models is the actual representaion od what will show/display on the screen. one point to be noted 
+is that this is not a one to one representaion of HTML. Also render tree is a combination of multiple trees, where 
+different rendering activities are achieved by the respective trees. Things which are not in the render tree, 
+are all non visual items. Few of the subset trees are,
+> render objexts
+> render styles
+> render layers
+> line boxes
+
+
+Question-4::
+
+Execute the below code and write your description in txt file
+typeof(1)
+typeof(1.1)
+typeof('1.1')
+typeof(true)
+typeof(null)
+typeof(undefined)
+typeof([])
+typeof({})
+typeof(NaN)
+
+
+Answer:
+
+Code: 
+console.log(typeof(1))
+Output:
+number  //integers and floats come under the number datatype
+
+Code: 
+console.log(typeof(1.1))
+Output:
+number  //integers and floats come under the number datatype
+
+Code: 
+console.log(typeof('1.1'))
+Output:
+string  //Anything between single/double quotes is treated as string
+
+Code: 
+console.log(typeof(true))
+Output:
+boolean  // true or false are treated as logical boolean values( 1 or 0)
+
+Code: 
+console.log(typeof(null))
+Output:
+object  //null had 0 as type tag, hence the typeof return value "object"
+
+Code: 
+console.log(typeof(undefined))
+Output:
+undefined  //Basically when a variable in declared but is not assigned a value.
+
+Code: 
+console.log(typeof([]))
+Output:
+object   //This declares an empty array of type 'object'
+
+Code: 
+console.log(typeof({}))
+Output:
+object   //This declares an empty regular object of type 'object'
+
+Code: 
+console.log(typeof(NaN))
+Output:
+number  //NaN actually is technically a numeric data type whose value cannot be represented using actual numbers.
+
+
+Question-5: 
+Read what is prototype
+
+Answer:
+
+Javascript is also sometimes called a prototype based language. The reason being that an object can have a prototype 
+object to provide inheritance, which thusly acts as a template object to inherit methods and properties from.
+This is the simplest form of implicit inheritance, very similar to the concepts as observed in the object model but 
+without explicit definition.
